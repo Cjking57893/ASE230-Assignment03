@@ -1,37 +1,7 @@
 <?php
-// INSERT DATA HERE.
-
-?>
-<!DOCTYPE html>
-<html lang="en"> 
-<head>
-    <title>Our amazing team</title>
-    
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your name's resume">
-    <meta name="author" content="Your name">    
-    <link rel="shortcut icon" href="favicon.ico"> 
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    
-    <!-- FontAwesome JS-->
-	<script defer src="assets/fontawesome/js/all.min.js"></script>
-       
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
-
-
-</head> 
-
-<body>
-
-	<?php
 	$team_members=[
 		[
+			'dob' => '2002-07-16',
 			'img_path' => 'assets\images\Chris_Profile.jpg',
 			'firstname'=>'Chris',
 			'lastname'=>'King',
@@ -144,6 +114,7 @@
 			],
 		],
 		[
+			'dob' => '2003-07-11',
 			'img_path' => 'assets\images\Alanna_Profile.jpg',
 			'firstname'=>'Alanna',
 			'lastname'=>'Evans',
@@ -250,6 +221,7 @@
 			]
 		],
 		[
+			'dob' => '2002-10-12',
 			'img_path' => 'assets\images\Cody_Profile.jpg',
 			'firstname'=>'Cody',
 			'lastname'=>'King',
@@ -359,6 +331,7 @@
 			]
 		],
 		[	
+			'dob' => '2005-06-20',
 			'img_path' => 'assets\images\Tyler_Profile.jpg',
 			'firstname'=>'Tyler',
 			'lastname'=>'White',
@@ -462,100 +435,155 @@
 			]
 		]
 	];
-	?>
-    <article class="resume-wrapper text-center position-relative">
-	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
-			<h1 class="py-4 text-center">OUR AMAZING TEAM</h1>
-		    <header class="resume-header pt-4 pt-md-0">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="<?= $team_members[0]['img_path'] ?>" alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[0]['firstname'].' '.$team_members[0]['lastname']?></h1>
-							    <div class="title mb-3"><?=$team_members[0]['team_role']?></div>
-								<a href="detail.php?id=<?=0?>" class="btn btn-secondary">See full profile</a>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>
-		    
-		    <header class="resume-header mt-4 pt-4 pt-md-0">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="<?= $team_members[1]['img_path'] ?>" alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[1]['firstname'].' '.$team_members[1]['lastname']?></h1>
-							    <div class="title mb-3"><?=$team_members[1]['team_role']?></div>
-								<a href="detail.php?id=<?=1?>" class="btn btn-secondary">See full profile</a>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>
-		    
-		    <header class="resume-header mt-4 pt-4 pt-md-0">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="<?= $team_members[2]['img_path'] ?>" alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[2]['firstname'].' '.$team_members[2]['lastname']?></h1>
-							    <div class="title mb-3"><?=$team_members[2]['team_role']?></div>
-								<a href="detail.php?id=<?=2?>" class="btn btn-secondary">See full profile</a>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>
+?>
 
-			<header class="resume-header mt-4">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="<?= $team_members[3]['img_path'] ?>" alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[3]['firstname'].' '.$team_members[3]['lastname']?></h1>
-							    <div class="title mb-3"><?=$team_members[3]['team_role']?></div>
-								<a href="detail.php?id=<?=3?>" class="btn btn-secondary">See full profile</a>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>		    
-	    </div>
+
+<?php 
+
+// Function to calculate age for team members
+function calculateFullAge($dob) {
+    $birthDate = new DateTime($dob);
+    $currentDate = new DateTime();
+    $age = $currentDate->diff($birthDate);
+    return $age->y . " years, " . $age->m . " months, and " . $age->d . " days";
+}
+
+// Function to display a member card with name, email, LinkedIn, image path, and role
+function display_member_card($members, $index) {
+    $member = $members[$index];
+    echo '
+    <header class="resume-header mt-4 pt-4 pt-md-0">
+        <div class="row">
+            <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
+                <img class="picture" src="' . $member['img_path'] . '" alt="' . $member['firstname'] . ' ' . $member['lastname'] . '">
+            </div><!--//col-->
+            <div class="col">
+                <div class="row p-4 justify-content-center justify-content-md-between">
+                    <div class="primary-info col-auto">
+                        <h1 class="name mt-0 mb-1 text-white text-uppercase">' . $member['firstname'] . ' ' . $member['lastname'] . '</h1>
+                        <div class="title mb-3">' . $member['team_role'] . '</div>
+                        <div class="contact-info">
+							<p>Age: ' . calculateFullAge($member['dob']) . '</p>
+                            <p>Email: <a href="mailto:' . $member['email'] . '">' . $member['email'] . '</a></p>
+                            <p>LinkedIn: <a href="https://' . $member['linked_in'] . '" target="_blank">' . $member['linked_in'] . '</a></p>
+                        </div>
+                    </div><!--//primary-info-->
+                    <div class="secondary-info col-auto mt-2">
+                        <a href="detail.php?id=' . $index . '" class="btn btn-secondary">See full profile</a>
+                    </div><!--//secondary-info-->
+                </div><!--//row-->
+            </div><!--//col-->
+        </div><!--//row-->
+    </header>';
+}
+
+?>
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Our amazing team</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your name's resume">
+    <meta name="author" content="Your name">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+       
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
+    
+    <style>
+        /* Add custom styles for the team member cards */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .resume-wrapper {
+            padding: 2rem;
+        }
+        .resume-wrapper-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .resume-header {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        
+        .name {
+            font-size: 2rem;
+            color: #343a40;
+        }
+        .title {
+            font-size: 1.25rem;
+            color: #6c757d;
+        }
+        .contact-info p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .footer .copyright {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+    </style>
+</head> 
+
+<body>
+    <article class="resume-wrapper text-center position-relative">
+        <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
+            <h1 class="py-4 text-center">OUR AMAZING TEAM</h1>
+            
+            <?php 
+            // Loop through the team members array and display each member's card
+            for ($i = 0; $i < count($team_members); $i++) {
+                display_member_card($team_members, $i);
+            }
+            ?>
+            
+        </div>
     </article> 
 
-    
     <footer class="footer text-center pt-2 pb-5">
-	    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-        <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <?= $team_members[0]['firstname'] . ', ' . $team_members[1]['firstname'] . ', ' . $team_members[2]['firstname'] . ', ' . $team_members[3]['firstname'] ?></small>
+        <small class="copyright">Designed with <span class="sr-only">love</span>
+        <i class="fas fa-heart"></i> by <?= $team_members[0]['firstname'] . ', ' . $team_members[1]['firstname'] . ', ' . $team_members[2]['firstname'] . ', ' . $team_members[3]['firstname'] ?></small>
     </footer>
-
-    
 
 </body>
 </html> 
+
 
