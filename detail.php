@@ -1,5 +1,10 @@
 <?php
-
+function calculateFullAge($dob) {
+    $birthDate = new DateTime($dob);
+    $currentDate = new DateTime();
+    $age = $currentDate->diff($birthDate);
+    return $age->y . " years, " . $age->m . " months, and " . $age->d . " days";
+}
 	$team_members=[
 		[
 			'img_path' => 'assets\images\Chris_Profile.jpg',
@@ -17,6 +22,8 @@
 								studied at Southeastern Career Center, studying computer repair and networking.  There I learned how to troubleshoot PCs, how to create and run cat 5 and 
 								cat 6 cables, how set up networks, different network arcitectures, and how data is transmitted over a network. I do not have any work experience in my desired field, 
 								but I hope to get an internship next summer',
+			
+			'dob'=>'2002-07-16',
 			/*Access in loop using iterator
 			*EX: $team_members['job_experience'][$i]['job_title/company_name/job_summary/etc.']
 			*/
@@ -123,6 +130,9 @@
 			'github' => 'https://github.com/evansa27',
 			'website' => 'n/a',
 			'bio'=> 'My name is Alanna Evans, and I am a senior working on my Bachelor of Science in Cybersecurity at Northern Kentucky University. I am also minoring in Computer Science and Computer Forensics as well. I have had multiple cybersecurtrity based internships at GE Aerospace. During my time here I worked on the Insider Threat and Data Protection Team, as well as the Cyber Intel and Active Defense Team. I have recently accpeted a postion as a DTLP within the company after I graduate. A few fun facts about me is that I recently traveled outside of the country for the first time, and I love going to concerts.',
+			'dob'=> '2003-07-11',
+
+
 			/*Access in loop using iterator
 			*EX: $team_members['job_experience'][$i]['job_title/company_name/job_summary/etc.']
 			*/
@@ -228,6 +238,7 @@
 			'github' => 'github.com/Cjking57893',
 			'website' => 'n/a',
 			'bio'=> "Currently I'm attending Northern Kentucky University majoring in Applied Software Engineering. I transferred from a community college after getting my Associate's degree. Some languages I'm proficient in are C#, Javascript, and HTML & CSS. I also have experience using GIT and Github.",
+			'dob'=>'2002-10-12',
 			/*Access in loop using iterator
 			*EX: $team_members['job_experience'][$i]['job_title/company_name/job_summary/etc.']
 			*/
@@ -334,6 +345,7 @@
 			'github' => 'https://github.com/clickersb',
 			'website' => 'N/A',
 			'bio'=> 'My name is Tyler White and I am a sophmore at Northern Kentucky University studying Cybersecurity.',
+			'dob'=>'2005-06-20',
 			/*Access in loop using iterator
 			*EX: $team_members['job_experience'][$i]['job_title/company_name/job_summary/etc.']
 			*/
@@ -431,6 +443,7 @@
 
 	// Storing array data for selected team member in variables.
 	$member = $team_members[$id];
+	$dob = $member['dob'];
 	$skills = $member['skills'];
 	$other_skills = $member['other_skills'];
 	$job_experience = $member['job_experience'];
@@ -498,12 +511,14 @@
 				    </div><!--//col-->
 			    </div><!--//row-->
 		    </header>
+
 		    <div class="resume-body p-5">
 			    <section class="resume-section summary-section mb-5">
 				    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Summary</h2>
 				    <div class="resume-section-content">
+						<p class="mb-0"><?="<b>Age: </b>" . calculateFullAge($member['dob'])?></>
 					    <p class="mb-0"><?= $member['bio'] ?></p>
-				    </div>
+			    </div>
 			    </section><!--//summary-section-->
 			    <div class="row">
 				    <div class="col-lg-9">
@@ -513,6 +528,7 @@
 							    <div class="resume-timeline position-relative">
 								    
 									<?php
+
 										foreach($job_experience as $job) {
 											echo
 											'<article class="resume-timeline-item position-relative pb-5">
@@ -567,6 +583,7 @@
 						        <div class="resume-skill-item">
 							        <ul class="list-unstyled mb-4">
 										<?php
+
 											foreach($skills as $skill) {
 												echo
 												'<li class="mb-2">
