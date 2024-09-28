@@ -1,5 +1,5 @@
 <?php
-
+	include 'functions.php';
 	$team_members=[
 		[
 			'img_path' => 'assets\images\Chris_Profile.jpg',
