@@ -1,6 +1,6 @@
 <?php
 // INSERT DATA HERE.
-
+include 'functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en"> 

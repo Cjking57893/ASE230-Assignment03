@@ -1,10 +1,5 @@
 <?php
-function calculateFullAge($dob) {
-    $birthDate = new DateTime($dob);
-    $currentDate = new DateTime();
-    $age = $currentDate->diff($birthDate);
-    return $age->y . " years, " . $age->m . " months, and " . $age->d . " days";
-}
+	include 'functions.php';
 	$team_members=[
 		[
 			'img_path' => 'assets\images\Chris_Profile.jpg',
